@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""Function From JSON string to Object"""
+import json
 
 
-def append_write(filename="", text=""):
-    with open(filename, "a", encoding="utf-8") as f:
-        return f.write(text)
+def from_json_string(my_str):
+    """Function that returns an object (Python data structure)
+    represented by a JSON string"""
+
+    return json.loads(my_str)
